@@ -1,0 +1,580 @@
+@import url('https://fonts.googleapis.com/css2?family=Hubballi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gaegu&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family:sans-serif;
+    font-family: Hubballi;
+}
+
+html,body{
+    height:100%;
+    width:100%;
+    background-color: black;
+}
+
+.main-container{
+    height: 100%;
+    width: 100%;
+    background-color: #000000;
+    position: relative;
+    padding-top:1px;
+    /* After giving padding top this bug is been fixed */
+}
+
+.navbar{
+    width: 100%;
+    height: 40px;
+    /* margin-top:45px; */
+    /* This is the bug here  */
+    margin-top:20px;
+    border-top:2px solid black;
+    border-bottom:2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(233, 233, 233);
+}
+
+.f-nav{
+    font-size: 13px;
+    cursor:pointer;
+}
+.f1-nav{
+    font-size: 26px;
+    letter-spacing: -1px;
+    cursor:default;
+}
+
+
+.navbar > .menu-bar{
+    display: none;
+} 
+
+.navbar h3{
+    height: 100%;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 2px solid black;
+
+}
+.navbar h1{
+    height: 100%;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Gaegu;
+    font-weight: 700;
+    position: relative;
+}
+
+
+.navbar > h1::after{
+    content:"©️";
+    font-family:sans-serif;
+    font-weight: 200;
+    font-size: 13px;
+    position: absolute;
+    right:23%;
+    top:3px;
+}
+.navbar > h1::before{
+    content:"model managment";
+    font-family:sans-serif;
+    font-weight: 200;
+    font-size: 8px;
+    position: absolute;
+    left: 30%;
+    bottom: 0;
+    letter-spacing: 1px;
+    color:#666;
+}
+
+.navbar h3:nth-last-child(1){
+    width: 10%;
+} 
+
+
+/* Now styling the center content here */
+
+.center-content{
+    height: 85.3vh;
+    width: 100%;
+    position: relative;
+    padding:4vw;
+    background-color: black;
+}
+
+.content{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+.content video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.overlay{
+    height: 45%;
+    width: 100%;
+    position: absolute;
+    bottom:0;
+    padding:3vw;
+    color:#fff;
+}
+
+.over1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2vw;
+    mix-blend-mode: difference;
+}
+.over2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+    border-top: 0.9px solid #fff;
+    margin-top:10px;
+    mix-blend-mode: difference;
+}
+
+.content-f{
+    font-size: 3.6vw;
+    font-weight: 400;
+}
+
+.over1-h2{
+    font-size: 1vw;
+    padding: 2vw 2.4vw;
+    border-radius: 50%;
+    border: 1px solid #fff;
+
+}
+.over2-h4{
+   font-size: 1.3vw;
+}
+
+/* Now styling the scroll part */
+
+.scroll{
+    width: 100%;
+    height: 37vh;
+    white-space: nowrap;
+    overflow-x: hidden;
+    overflow-y:hidden;
+    background-color: black;
+}
+
+
+.scroll-container{
+    width: 77%;
+    height: 100%;
+    display: inline-block;
+    padding:2vw;
+    animation-name: animationAyu;
+    animation-duration:6s;
+    animation-timing-function:linear;
+    animation-iteration-count: infinite;
+
+}
+.scroll img{
+    height: 60%;
+    border-radius: 50%;
+    width: 15%;
+    object-fit: cover;
+    margin:0.7vw;
+    object-position: 30% 30%
+
+}
+
+
+.image-position{
+    background-position: top center;
+}
+
+
+/* Now we will apply animation here */
+
+@keyframes animationAyu{
+    from{
+        transform:translateX(0);
+    }
+    to{
+        transform:translateX(-100%)
+    }
+}
+
+
+.alphabet{
+    height: 12vh;
+    width: 100%;
+    background-color: rgb(11, 11, 11);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:1vw;
+    color: white;
+    border-top:0.7px solid white;
+    border-bottom:0.7px solid white;
+}
+
+.alphabet h5{
+    font-size: 17px;
+    text-transform: uppercase;
+    font-style: italic;
+    border-bottom:2px solid rgb(255, 255, 255);
+    letter-spacing: 2px;
+    margin-right:2vw;
+}
+.alphabet h6{
+    font-size: 9px;
+    text-transform: uppercase;
+    font-style: italic;
+    color:rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    padding: 0.5vw 0.7vw;
+    border-radius:50%;
+    transition:all ease 0.2s;
+}
+
+.alphabet h6:hover{
+    border:1px solid rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.page2{
+    height: 100%;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:3vw 5vw;
+    background-color: rgb(0, 0, 0);
+}
+
+.page2-part1{
+    height: 70%;
+    width: 50%;
+    background-image: url('https://images.unsplash.com/photo-1610276198568-eb6d0ff53e48?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cG90cmFpdHxlbnwwfHwwfHx8MA%3D%3D');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    image-resolution: high;
+}
+.page2-part2{
+    height:50%;
+    width: 46%;
+}
+.page2-part2 img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    image-resolution: high;
+    object-position:center center ;
+}
+
+.page2-text-1{
+    color: #fff;
+    padding: 2px 3px;
+    font-weight: bold;
+    font-size: 17px;
+}
+.page2-text-2{
+    color: #fff;
+    padding: 2px 3px;
+    font-size: 12px;
+}
+
+.text-div{
+    display: flex;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    justify-content: space-between;
+
+}
+
+.page3{
+    height: 100%;
+    width: 100%;
+    padding:3vw;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.page3-part1 img{
+    height: 124px;
+    width: 200px;
+    margin-left: 73px;
+}
+
+.page3-part2{
+    height: 70%;
+    width: 70%;
+    background-image: url('https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cG90cmFpdHxlbnwwfHwwfHx8MA%3D%3D');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    image-resolution: high;
+    padding: 0px 13px;
+}
+
+
+.page3-text1{
+    color: #fff;
+    padding: 2px 3px;
+    font-size: 12px;
+    text-align: left;
+    padding: 5px 0px;
+}
+
+.page-4{
+    background-color: rgb(0, 0, 0);
+    height: 100%;
+    width: 100%;
+    position: relative;
+    padding: 5vw 4vw;
+}
+
+.page-4 > h1{
+    color:white;
+    font-size: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 12px 0px;
+    margin-bottom: 2vh;
+}
+
+.elem{
+    height: 16vh;
+    width: 100%;
+    border-top: 1px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:0px 2vw;
+    position: relative;
+}
+
+.elem > img{
+    position: absolute;
+    height:40px;
+    width: 40px;
+    border-radius: 50%;
+    left:28%;
+    object-fit: cover;
+}
+
+
+
+
+
+.elem:nth-last-child(1){
+    border-bottom: 1px solid white;
+}
+
+.elem h4{
+    color:white;
+    font-size: 12px;
+    text-transform: uppercase;
+    width: 6%;
+}
+
+.elem-part2 > h5{
+    color:#fff;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+.elem-part2 > .name{
+    color:#fff;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.elem .elem-part2{
+    width: 41%;
+}
+
+
+/* Now I will style page-5 */
+
+.page-5{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    padding: 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.img-bg{
+    background-image: url('https://images.unsplash.com/photo-1531353217282-64e6ab85d240?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGhvdG9zJTIwb2YlMjBodW1hbnxlbnwwfHwwfHx8MA%3D%3D');
+    height: 80%;
+    width: 80%;
+    image-resolution: high;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    margin-right: 20px;
+}
+
+.pg-5-h-t-t{
+    height: 80%;
+    width: 80%;
+    color:white;
+}
+
+.pg-5-h-t-t > h1{
+    font-size: 23px;
+    padding: 10px;
+    text-transform: uppercase;
+    text-align: left;
+    font-weight: 900;
+}
+
+.pg-5-1{
+    margin-top: 38px 0px;
+    padding:1vw;
+    font-size: 14px;
+}
+.pg-5-2{
+    margin-top: 8px 0px;
+    padding:1vw;
+    font-size: 17px;
+    margin-bottom: 32px;
+}
+
+.pg-5-h-t-t > img{
+    height: 40%;
+    width:40%;
+    object-fit: cover;
+    object-position: center;
+    margin-left:25px;
+}
+
+
+/* Marquee and footer */
+
+.marquee{
+    height: 15vh;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    white-space: nowrap;
+    overflow-x:hidden;
+    overflow-y:hidden;
+    padding:20px 8px;
+    border-top:2px solid #fff;
+    border-bottom:2px solid #fff;
+
+}
+
+.marquee > h1{
+    font-size: 18px;
+    display:inline-block;
+    text-transform: uppercase;
+    -webkit-text-stroke:2px #ff6a6a;
+    color:transparent;
+    margin-right: 16px;
+    letter-spacing: 2px;
+    animation-name: move;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+
+@keyframes move{
+    from{
+        transform:translateX(0);
+    }
+    to{
+        transform:translateX(-100%);
+    }
+}
+
+
+/* this css for page-6 */
+
+.page-6{
+    height:90%;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    padding:8vw;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    border-bottom:2px solid white;
+}
+
+.div-1{
+    margin-right: 28px;
+}
+.div-2{
+    margin-right: 16px;
+}
+.div-3{
+    margin-right: 16px;
+}
+
+.div-1 > h1{
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bolder;
+    color:#fff;
+}
+.div-2 > p{
+    font-size: 13px;
+    margin-bottom: 10px;
+    color:#fff;
+}
+.div-3 > p{
+    font-size: 13px;
+    margin-bottom: 10px;
+    color:#fff;
+}
+.div-2 > img{
+    height: 60%;
+    width:60%;
+    object-fit:cover;
+    object-position:center center;
+}
+.div-3 > img{
+    height:60%;
+    width:60%;
+    object-fit:contain;
+    object-position: center center;
+}
+
+
+.foot{
+    height:20vh;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    border-bottom:2px solid white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.foot >h1{
+    padding: 0.3vw;
+    color:white;
+    font-size: 13px;
+    text-align: center;
+
+}
+
+
+
